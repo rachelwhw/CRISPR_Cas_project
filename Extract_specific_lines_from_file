@@ -1,0 +1,2 @@
+# how to extract line 16-26 from file
+sed -n -e '16,26p' file.txt > output.txt
