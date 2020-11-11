@@ -1,0 +1,5 @@
+# with standard blast settings
+for i in *.fasta;do /usr/local/ncbi/blast/bin/blastn -query anti_crispr.fa -subject $i -out "$i".anti.txt; done
+
+# with coverage and identity cut offs
+for i in `ls /location/*.fasta`; do /usr/local/ncbi/blast/bin/blastn -query $i -subject database.fasta -out $i.txt -perc_identity 60 -task blastn ;done
